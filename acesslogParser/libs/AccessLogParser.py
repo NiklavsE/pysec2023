@@ -4,6 +4,7 @@ import json
 from jsonpath_ng import jsonpath, parse
 import datetime
 
+
 class AccessLogParser(object):
     def __init__(self):
         pass
@@ -22,11 +23,11 @@ class AccessLogParser(object):
         lines = readFile(self.log_file_path)
         for log_dict in lines:
             jsonData = json.loads(log_dict['json'])
-            
+
             match = pathExpression.find(jsonData)
             if (value == match[0].value):
                 matched_events.append({
-                    'timestamp': log_dict['timestamp'], 
+                    'timestamp': log_dict['timestamp'],
                     'json': log_dict['json']
                 })
 

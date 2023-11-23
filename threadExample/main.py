@@ -3,12 +3,12 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-##
-# Prints current day list of advertisments in ss.lv for Cesis and Sigulda cities
-##
+##########################################################################
+# Script that Prints current day list of advertisments in ss.lv 
+# for Cesis and Sigulda cities with the help of threading
+##########################################################################
 
 listings = []
-
 
 def scrapeWebsite(url, region):
     response = requests.get(url)

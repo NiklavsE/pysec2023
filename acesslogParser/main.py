@@ -12,7 +12,8 @@ from datetime import datetime
 AcessLogParser = AccessLogParser()
 AcessLogParser.info()
 # return all the log records that match the following value for request id
-events = AcessLogParser.readFile('$.request_id', 'ad9f0ce4296e562242cdb529f4044fbb')
+events = AcessLogParser.readFile(
+    '$.request_id', 'ad9f0ce4296e562242cdb529f4044fbb')
 
 for event in events:
     print(event)

@@ -3,6 +3,11 @@ import time
 import signal
 import math
 
+##########################################################################
+# Script that executes a long task (prints Fibonacci sequence) and has
+# an implementation to catch “CRTL+C” and exit gracefully
+##########################################################################
+
 
 def sigintHandler(signum, frame):
     print('Received CTRL+C signal, stopping.')
